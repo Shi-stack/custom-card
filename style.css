@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+*{
+  margin: 0;
+  padding:0;
+  font-family: 'Dancing Script', cursive;
+}
+
+/*Main content style*/
+body {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: #062f4f;
+ 
+}
+
+.container {
+  position: relative;
+  width:1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+  padding: 30px; 
+}
+
+.container .card {
+  position: relative;
+  max-width: 300px;
+  height: 250px;
+  background: #FFFF;
+  margin: 30px 10px;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px  20px rgba(0,0,0,0.5);
+  transition: 0.3s ease-in-out; 
+  border-radius: 30px;
+}
+
+.container .card:hover {
+  height: 420px;
+}
+
+.container .card .image {
+  position: relative;
+  align-items: center;
+  width: 260px;
+  height: 260px;
+  top: -70px;
+  /*left: 20px;*/ 
+  box-shadow:  0 5px 20px rgba(0,0,0,0.2);
+}
+
+.container .card .image img{
+ max-width: 100%;
+ border-radius: 20px;
+
+}
+
+.container .card .content{
+  position: relative;
+  /*margin-top:-140px;
+  padding: 80px 15px;*/
+  height: 20px;
+  top: -140px;
+  text-align: center;
+  visibility: hidden;
+  opacity:0;
+  transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .content{
+  visibility:visible;
+  opacity: 1;
+  margin-top:-40px;
+  transition-delay: 0.3s; 
+}
+
+.container .card:hover .image{
+  visibility:hidden;
+}
+
+.container .card:hover .content h2{
+  font-size: 2rem;
+  padding: 10px;
+  color: #008F95;
+  background: #E9B000;
+  border-radius: 20px;
+}
+
+.container .card:hover .content p{
+  font-size: 20px;
+  padding: 10px;
+}
+
+.container .card:hover .content .svg{
+ font-size: 40px;
+ padding: 20px;
+ letter-spacing: 0.5rem;
+}
+
+.container .card:hover .content .svg i{
+  color:#008F95;
+}
